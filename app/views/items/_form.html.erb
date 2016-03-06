@@ -1,0 +1,23 @@
+<%= form_for([@list, @list.items.build]) do |f| %>
+  <% if @list.errors.any? %>
+	    <div id="errors"
+	      <h2><%= pluralize(@list.errors.count, "error") %> prevented this list from being saved</h2>
+	      <ul>
+		    <% @list.errors.full_messages.each do |msg| %>
+		      <li><%= msg %></li>
+		      <% end %>
+	     </ul>
+	    </div>
+	<% end %>
+ <p>
+ 	<%= f.label :content %> <br>
+ 	<%= f.text_field :content %> <br>
+ </p>
+
+ <br>
+ <p>
+ 	<%= f.submit %>
+ </p>
+
+<% end %>
+
