@@ -7,6 +7,8 @@ class ListsController < ApplicationController
     @list = List.create(list_params)
     if @list.save
       redirect_to @list
+    else
+      render new
   end
 end
 
@@ -22,9 +24,9 @@ end
 
   def show
     @list = List.find(params[:id])
-    @item = Item.all
   end
 
+  private
 
   def list_params
     params.require(:list).permit(:title, :description)

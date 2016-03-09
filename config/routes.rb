@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-   root 'lists#index'
+   root 'static_pages#home'
 
   resources :lists do
     resources :items
