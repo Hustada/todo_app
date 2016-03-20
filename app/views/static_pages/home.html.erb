@@ -1,11 +1,22 @@
 <%= render 'shared/header' %>
 
-<section class="section-signup js--signup">
+<section class="section-list js--list">
+
 	<div class="row">
-		<h2>Sign Up</h2>
-	</div>
-	<div class="row">
+	<div class="col span-1-of-2">
+	<h2>Create a list</h2>
 		<%= render 'lists/form' %>
 	</div>
-	
+	<div class="col span-1-of-2">
+		<h2>Current lists</h2>
+					<ul class="home-list">
+				<% @lists.each do |list| %>
+					<li><%=link_to "#{list.title}", list_path(list) %>  - created <%= time_ago_in_words(list.created_at) %> ago -  <%= link_to 'Delete', [list],
+                  method: :delete,
+                  class:  "button",
+                  data: {confirm: 'Are you sure?'}   %></li>
+					<% end %>
+				</ul>
+				<center><%= will_paginate @lists %></center>		
+	</div>				
 </section>

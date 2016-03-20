@@ -21,6 +21,11 @@ Orange color: #34495e
     box-sizing: border-box;
 }
 
+ul {
+    list-style: none;
+}
+
+
 html,
 body {
     background-color: #fff;
@@ -136,8 +141,8 @@ h2:after {
 
 /* ----- LINKS ----- */
 
-a:link,
-a:visited {
+.main-nav a:link,
+.main-nav a:visited {
     color: #34495e;
     text-decoration: none;
     padding-bottom: 1px;
@@ -279,3 +284,23 @@ header {
     font-size: 200%;
     color: #fff;
 }
+
+
+/* ----------------------------------------------- */
+/* List on home page */
+/* ----------------------------------------------- */
+
+.home-list a:link,
+.home-list a:visited {
+    color: #34495e;
+    text-decoration: none;
+    padding-bottom: 1px;
+}
+
+.home-list a:hover {
+    border-bottom: 1px solid #34495e;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+

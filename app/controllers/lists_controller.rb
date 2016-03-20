@@ -22,6 +22,14 @@ end
   def delete
   end
 
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy
+    if @list.destroy
+      redirect_to root_path
+    end
+  end
+
   def show
     @list = List.find(params[:id])
   end
