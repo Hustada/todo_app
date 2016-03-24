@@ -1,10 +1,8 @@
 <ul>
   <li><%= item.content %></li>	
 </ul>  	
-
-
-  <%= link_to 'Delete', [item.list, item],
+  <%= link_to 'Delete', [@list, item],
                   method: :delete,
-                  class:  "button",
-                  data: {confirm: 'Are you sure?'}   %>
+                  data: { confirm: 'Are you sure?' }   %>
 
+                  
