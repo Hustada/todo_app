@@ -33,6 +33,7 @@ end
 
   def show
     @list = List.find(params[:id])
+    @item = @list.items.find.(params[:id]).order(created_at 'ASC') unless @item.nil?
   end
 
   private

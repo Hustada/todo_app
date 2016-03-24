@@ -1,0 +1,3 @@
+$('.item-form').remove();
+$('.item--js').append("<%= j(render 'item', item: @item, list: @list ) %>");
+$('.item-form').add();
