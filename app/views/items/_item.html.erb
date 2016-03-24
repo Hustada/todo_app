@@ -1,6 +1,8 @@
 <ul>
   <li><%= item.content %></li>	
 </ul>  	
+
+<%= debug @list.items %>
   <%= link_to 'Delete', [@list, item],
                   method: :delete,
                   data: { confirm: 'Are you sure?' }   %>
