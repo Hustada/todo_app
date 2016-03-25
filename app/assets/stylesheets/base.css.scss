@@ -1,15 +1,15 @@
 /*
 Orange color: #34495e
-
 */
+
 /*.col {
     border: 1px solid black;
 }
 */
 /*.row {
     border: 1px solid black;
-}
-*/
+}*/
+
 
 /* ----------------------------------------------- */
 /* BASIC SETUP */
@@ -303,8 +303,12 @@ header {
     transition: border-bottom 0.2s, color 0.2s;
 }
 
+/* ----------------------------------------------- */
+/* List on list page */
+/* ----------------------------------------------- */
 
-
-
+.list-item {
+    text-transform: capitalize;
+}
 
 

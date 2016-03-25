@@ -1,21 +1,16 @@
 
 
 <section class"todo-list">
-<div class="col span-1-of-1"></div>
-	<div class="row">
-		<h2><%= @list.title %></h2>
-		<center><p>Created <%= time_ago_in_words(@list.created_at) %> ago</p>
-	</div>
-
-	<div class="row" id="test--js">
-	<div class="col span-1-or-1">
+<h2><%= @list.title %></h2>
+<center><p><%= @list.created_at.strftime("%d %b. %Y") %></p></center>
+<div class="row">
+	<div class="col span-1-of-2">
 		<h3><%= @list.description %></h3>
-		
 			<%= render :partial => 'items/form' %>
-		
+	</div>
+	<div class="col span-1-of-2">
 		<div class="item--js">
 			<%= render :partial => @list.items %>
-		</div>
-	</div>
-	</div>
+	</div>		
+</div>
 </section>
