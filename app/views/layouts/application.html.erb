@@ -2,11 +2,16 @@
 <html>
 <head>
   <title>TodoApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" >
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
 </head>
+
+<% flash.each do |message_type, message| %>
+  <center><div class="flash-message <%= message_type %>"><%= message %></div></center>
+<% end %>
 <body>
 
 <%= yield %>

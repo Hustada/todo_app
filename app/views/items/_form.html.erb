@@ -1,5 +1,5 @@
 <div class="item-form">
-<%= form_for([@list, Item.new], remote: true) do |f| %>
+<%= form_for([@list, Item.new], class: 'inline', remote: true) do |f| %>
   <% if @list.errors.any? %>
 	    <div id="errors"
 	      <h2><%= pluralize(@list.errors.count, "error") %> prevented this list from being saved</h2>
@@ -11,13 +11,13 @@
 	    </div>
 	<% end %>
  <p>
- 	<%= f.label :item %> <br>
+ 	<%= f.label :item, "Add an item" %> <br>
  	<%= f.text_field :content %> <br>
  </p>
 
  <br>
  <p>
- 	<%= f.submit %>
+ 	<%= f.submit "Add item" %> <%=link_to "Back", root_path %>
  </p>
 
 <% end %>

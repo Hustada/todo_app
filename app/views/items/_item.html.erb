@@ -1,9 +1,8 @@
-<ul>
-  <li class="list-item"><%= item.content %> <%= link_to 'Delete', [@list, item],
-                  method: :delete,
-                  data: { confirm: 'Are you sure?' }   %></li>	
-</ul>  	
-
-  
-
-                  
+			<ul class="list">
+				<li class="list-item">
+					<input type="checkbox">
+					<label><%= item.content %> <%= link_to 'Delete', [@list, item],
+                  		method: :delete,
+                  		data: { confirm: 'Are you sure?' }   %></label>
+				</li>
+			</ul>

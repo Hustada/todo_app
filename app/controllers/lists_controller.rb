@@ -9,7 +9,8 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to @list
     else
-      render new
+      redirect_to root_path
+      flash[:notice] = "If you had filled out the list form properly you wouldn't be seeing this"
   end
 end
 

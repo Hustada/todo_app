@@ -1,15 +1,19 @@
 
 
-<section class"todo-list">
+<section class="todo-list-section">
 <h2><%= @list.title %></h2>
-<center><p><%= @list.created_at.strftime("%d %b. %Y") %></p></center>
+<center><p><%= @list.created_at.strftime("%d %b. %Y") %></p></center><br>
+</section>
+
+<section class="list-info-section">
+<div class="row"><center><h2><%= @list.description %></h2f></center></div><br><br>
 <div class="row">
 	<div class="col span-1-of-2">
-		<h3><%= @list.description %></h3>
-			<%= render :partial => 'items/form' %>
+			<center><p><%= render :partial => 'items/form' %></p></center>
 	</div>
 	<div class="col span-1-of-2">
 		<div class="item--js">
+		<h3>Current items on list</h3>
 			<%= render :partial => @list.items %>
 	</div>		
 </div>
