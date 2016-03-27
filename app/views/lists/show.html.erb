@@ -1,20 +1,25 @@
 
 
 <section class="todo-list-section">
-<h2><%= @list.title %></h2>
-<center><p><%= @list.created_at.strftime("%d %b. %Y") %></p></center><br>
-</section>
+	<h2 class="list-title"><%= @list.title %></h2>
+		<center><p class="list-title"><%= @list.created_at.strftime("%d %b. %Y") %></p></center><br>
+		<a href="#arrow-down"><i class="ion-ios-arrow-down icon-big list-title-icon" id="scroll-to-items"></i></a>
+	</section>
 
 <section class="list-info-section">
-<div class="row"><center><h2><%= @list.description %></h2f></center></div><br><br>
-<div class="row">
-	<div class="col span-1-of-2">
+	<div class="row"><center><h2><%= @list.description %></h2f></center></div><br><br>
+	<div class="row">
+		<div class="col span-1-of-2">
 			<center><p><%= render :partial => 'items/form' %></p></center>
-	</div>
-	<div class="col span-1-of-2">
-		<div class="item--js">
-		<h3>Current items on list</h3>
-			<%= render :partial => @list.items %>
-	</div>		
-</div>
+		</div>
+		<div class="col span-1-of-2">
+			<div class="js--list-items">
+				<% if @list.items.empty? %>
+					<p clas="long-copy">Add some items</p>
+				<% else %>
+					<p clas="long-copy">Current list items</p>
+				<% end %><br>
+				<%= render :partial => @list.items %>
+			</div>		
+		</div>
 </section>
